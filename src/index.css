@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300&display=swap');
+body {
+    background-color: #0e4b5c;  /* This corresponds to Tailwind's bg-cyan-800 */
+}

@@ -1,0 +1,38 @@
+[
+    {
+        "_id": "1",
+        "name": "Alice Thompson",
+        "review": "This storytelling platform is exactly what I've been looking for! The interface is so intuitive, and I love the variety of stories available.",
+        "rating": 5
+    },
+    {
+        "_id": "2",
+        "name": "John Doe",
+        "review": "I had an amazing experience creating my first story here. The tools are easy to use, and I appreciate the creativity this platform encourages.",
+        "rating": 4
+    },
+    {
+        "_id": "3",
+        "name": "Sophia Patel",
+        "review": "A great place for interactive storytelling. I do wish there were more genres, but it’s already very engaging.",
+        "rating": 4
+    },
+    {
+        "_id": "4",
+        "name": "Michael Li",
+        "review": "I’m impressed with the platform's design and the quality of stories. It’s so much fun to explore different narratives!",
+        "rating": 5
+    },
+    {
+        "_id": "5",
+        "name": "Emma Garcia",
+        "review": "Fantastic for both readers and writers! I love being able to choose how stories progress. Definitely worth trying out.",
+        "rating": 5
+    },
+    {
+        "_id": "6",
+        "name": "Liam Brown",
+        "review": "Great site! The user experience is smooth, though I’d like to see a few more customization options.",
+        "rating": 4
+    }
+]
