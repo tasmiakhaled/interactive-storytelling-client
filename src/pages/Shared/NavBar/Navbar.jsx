@@ -1,11 +1,22 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../contexts/UserContexts";
 
 const Navbar = () => {
+
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => { })
+      .catch(error => console.log(error))
+  }
+
   const navOptions = (
     <>
       <li>
-        <NavLink 
-          to="/" 
+        <NavLink
+          to="/"
           className="text-white hover:text-yellow-500"
           activeClassName="text-yellow-500 font-bold"
         >
@@ -13,8 +24,8 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink 
-          to="/createStory" 
+        <NavLink
+          to="/createStory"
           className="text-white hover:text-yellow-500"
           activeClassName="text-yellow-500 font-bold"
         >
@@ -22,8 +33,8 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink 
-          to="/myStory" 
+        <NavLink
+          to="/myStory"
           className="text-white hover:text-yellow-500"
           activeClassName="text-yellow-500 font-bold"
         >
@@ -66,7 +77,21 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Sign In</a>
+          {
+            user?.displayName && <span className="font-bold mr-5">{user.displayName} </span>}
+          {
+            user?.displayName ?
+              <>
+                <button onClick={handleLogOut} className="btn px-4 py-1.5 text-white bg-gradient-to-r from-cyan-800 to-cyan-500 hover:from-cyan-500 hover:to-blue-500 rounded-xl shadow-lg transition-transform transform hover:scale-105">Log Out</button>
+              </> :
+              <>
+                <NavLink
+                  to="/login"
+                  className="btn px-4 py-1.5 text-white bg-gradient-to-r from-cyan-800 to-cyan-500 hover:from-cyan-500 hover:to-blue-500 rounded-xl shadow-lg transition-transform transform hover:scale-105"
+                > Log In
+                </NavLink>
+              </>
+          }
         </div>
       </div>
     </div>

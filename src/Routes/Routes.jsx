@@ -12,6 +12,11 @@ import MyStory from "../pages/MyStory/MyStory";
 import StoryDetails from "../pages/AllStories/SciFiStories/StoryDetails";
 import MysteryStoryDetails from "../pages/AllStories/MysteryStories/MysteryStoryDetails";
 import CreateStory from "../pages/CreateStory/CreateStory";
+import Login from "../pages/Login/Login";
+import SignUp from "../pages/SignUp/SignUp";
+import PrivateRoute from "./PrivateRoute";
+
+
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -23,16 +28,12 @@ export const router = createBrowserRouter([
             },
             {
                  path: "/createStory",
-                 element: <CreateStory></CreateStory>
+                 element: <PrivateRoute><CreateStory></CreateStory></PrivateRoute>
             },
             {
                 path: "createStory/sci-fi/:storyId",
                 element: <StoryDetails></StoryDetails>
             },
-            // {
-            //     path: "createStory/mystery",
-            //     element: <Mystery></Mystery>
-            // },
             {
                 path: "createStory/mystery/:storyId",
                 element: <MysteryStoryDetails></MysteryStoryDetails>
@@ -57,6 +58,14 @@ export const router = createBrowserRouter([
                 path: "/myStory",
                 element: <MyStory></MyStory>
             },
+            {
+                path: "/login",
+                element: <Login></Login>
+            },
+            {
+                path: "/signup",
+                element: <SignUp></SignUp>
+            }
         ]
     },
 ]);
